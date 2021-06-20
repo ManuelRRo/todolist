@@ -1,0 +1,36 @@
+body {
+    background-color: green;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header {
+    height: 10vh;
+    width: 100vw;
+    background-color: grey;
+}
+
+.main {
+    height: 80vh;
+    width: 100vw;
+    background-color: honeydew;
+}
+
+.footer {
+    height: 10vh;
+    width: 100vw;
+    background-color: hotpink;
+}
+
+.center {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+
+
+}
