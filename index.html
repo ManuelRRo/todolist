@@ -10,25 +10,41 @@
 <body>
 
     <header class="header">
-        <button id="btnNewTask">Hello</button>
+        <p>TASK LIST</p>
+        <button id="btnNewTask" class="btn-new-task">New task</button>
+        <button id="btnList" class="btn-list">List</button>
     </header>
 
     <main class="main">
-        <section class="task-information">
-            <label>TO DO</label>
-            <label>Title:</label>
-            <input type="text" id="title">
-            <label>Hour:</label>
+        <section class="task-information" id="taskInformationContainer">
+            <p class="text-to-do">TO DO</p>
+            <label class="text-tittle">Title:</label>
+            <input type="text" id="tittle" class="tittle" size="30">
+            <label class="text-hour">Hour:</label>
             <input type="time" name="" id="hour">
-            <label>Priority:</label>
-            <select name="" id="priority-select">
-                <option value="">Please choose an option</option>
-                <option value="">HIGH</option>
-                <option value="">MEDIUM</option>
-                <option value="">LOW</option>
+            <label class="text-priority">Priority:</label>
+            <select id="priority-select">
+                <option value="CHOOSE OPTION">Please choose an option</option>
+                <option value="HIGH">HIGH</option>
+                <option value="MEDIUM">MEDIUM</option>
+                <option value="LOW">LOW</option>
             </select>
-            <label>Comments:</label>
+            <label class="text-comment">Comments:</label>
             <input type="text" id="comments">
+            <button id="btnSave" class="btn-save">Save</button>
+        </section>
+
+        <section class="task-list-container" id="listContainer">
+
+            <label >TO DO</label>
+            <select id="selectOrder" class="select-order">
+                <option  class="order-option" value="From HIGH to LOW">From HIGH to LOW</option>
+                <option  class="order-option" value="From LOW to HIGH">From LOW to HIGH</option>
+                <option  class="order-option" value="HIGH">HIGH</option>
+                <option  class="order-option" value="MEDIUM">MEDIUM</option>
+                <option  class="order-option" value="LOW">LOW</option>
+            </select>
+            
         </section>
     </main>
 
