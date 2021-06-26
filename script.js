@@ -1,76 +1,126 @@
+const btnNewTask = document.getElementById('newTask');
+const btnList = document.getElementById('list');
+const btnSave = document.getElementById('save');;
+const informationContainer = document.querySelector('.information-task-container');
+const taskListContainer = document.querySelector('.task-list');
 
-const btnNewTask = document.getElementById('btnNewTask');
+const txtTittle = document.getElementById("tittle");
+const txtHour = document.getElementById("hour");
+const txtPriority = document.querySelectorAll(".radio");
+const txtComment = document.getElementById("comment");
 
-const btnList = document.getElementById('btnList');
+let task = null;
+let priority_ = document.querySelectorAll('.priority-text');
+const selectOrder = document.getElementById('select-order');
 
-const btnSave = document.getElementById('btnSave');
-
-const taskInformationContainer = document.getElementById('taskInformationContainer');
-
-const listContainer = document.getElementById('listContainer');
-
-const main = document.querySelector('.main');
-
-const selectOrder = document.getElementById('selectOrder');
-
-const txtTittle = document.getElementById('tittle');
-
-const txtHour = document.getElementById('hour');
-
-const txtPriority = document.getElementById('priority-select');
-
-const txtComments = document.getElementById('comments');
-
-btnNewTask.addEventListener("click", function () {
-    taskInformationContainer.classList.remove("hide");
-    listContainer.classList.remove("show");
+btnNewTask.addEventListener("click", () => {
+    taskListContainer.classList.remove("show");
+    informationContainer.classList.remove("hide");
 });
 
-btnList.addEventListener("click",function () {
-
-    taskInformationContainer.classList.add("hide");
-    listContainer.classList.add("show");
-
+btnList.addEventListener("click", () => {
+    informationContainer.classList.add("hide");
+    taskListContainer.classList.add("show");
+    task = document.querySelectorAll('.task-container');
+    priority_ = document.querySelectorAll('.priority-text');
+    console.log(task);
+    console.log(priority_);
+    orderElements(selectOrder.value);
 });
 
-selectOrder.addEventListener("change",function () {
-    console.log(selectOrder.value);
+btnSave.addEventListener("click",() =>{
+    buildTask();
 });
 
-btnSave.addEventListener("click", function () {
+function setPriority (){
+  let str = "";
+  txtPriority.forEach((element) => {
+      if(element.checked){
+          str = element.value;
+      } 
+  });
+  return str;
+}
 
-     listContainer.innerHTML += `
-     <div class="center">
-     <div class="task-header">
-         <div class="left-side"><p class="hour-position">${txtHour.value}</p></div>
-         <div class="right-side"><p class="priority-position">${txtPriority.value}</p></div>
-     </div>
-     <div class="task-content">
-         <div class="up-side"><p class="text-tittle-task-content">${txtTittle.value}</p></div>
-         <hr class="line">
-         <div class="down-side"><p class="text-comment-task-content">${txtComments.value}</p></div>
-     </div>
-  `;
-  //convertTo12hourFormat(txtHour.value);
-  //let priorities = document.querySelectorAll('.priority-position');
+////////////////////////////////////
+function buildTask () {
+    
+let taskContainer = document.createElement("div");
+let headerTaskContainer = document.createElement("div");
+let mainTaskContainer = document.createElement("div");
+let hour = document.createElement("p");
+let priority = document.createElement("p");
+let tittle = document.createElement("p");
+let line = document.createElement("hr");
+let comment = document.createElement("p");
+
+taskContainer.classList.add("task-container");
+headerTaskContainer.classList.add("header-task-container");
+hour.classList.add("hour-text");
+priority.classList.add("priority-text");
+mainTaskContainer.classList.add("main-task-container");
+
+hour.innerText = txtHour.value;
+priority.innerText = setPriority();
+tittle.innerText = txtTittle.value;
+comment.innerText = txtComment.value;
+
+taskListContainer.appendChild(taskContainer);
+taskContainer.appendChild(headerTaskContainer);
+taskContainer.appendChild(mainTaskContainer);
+
+let headerElement = [hour,priority];
+let mainElement = [tittle,line,comment];
+
+headerElement.forEach((element) => {
+  headerTaskContainer.appendChild(element);
+});
+
+mainElement.forEach((element) => {
+  mainTaskContainer.appendChild(element);
+});
+
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+selectOrder.addEventListener("change", () => {
+    orderElements(selectOrder.value);
+  });
   
-} );
-
-
-
-
-// function convertTo12hourFormat (time) {
-
-//     let str = time.substring(0,2);
-
-//     let minutes = time.substring(3,5);
-
-//     if(str.charAt(0) != '0'){
-        
-//     }
-
-// }
-
-
-
-
+  function orderElements (str) {
+    let cont = 0;
+    priority_.forEach(element => {
+      task[cont].classList.remove("hide");
+      task[cont].classList.remove("third");
+      task[cont].classList.remove("second");
+      task[cont].classList.remove("first");
+      
+       if(str === "From HIGH to LOW"){  
+        if (element.innerText ==="HIGH") task[cont].classList.add("first");
+         if (element.innerText ==="MEDIUM") task[cont].classList.add("second");
+          if (element.innerText ==="LOW") task[cont].classList.add("third"); 
+      }
+      
+        if(str === "From LOW to HIGH"){  
+          if (element.innerText ==="HIGH") task[cont].classList.add("third");
+           if (element.innerText ==="MEDIUM") task[cont].classList.add("second");
+             if (element.innerText ==="LOW") task[cont].classList.add("first"); 
+      }
+      
+      if(str === "HIGH"){  
+        if (element.innerText !="HIGH") task[cont].classList.add("hide");
+      }
+      
+      if(str === "MEDIUM"){
+        if (element.innerText !="MEDIUM") task[cont].classList.add("hide");
+      }
+      
+      if(str === "LOW"){
+        if (element.innerText != "LOW") task[cont].classList.add("hide");
+      }
+      
+      cont++;
+    });
+  }
+   
+  

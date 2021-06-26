@@ -4,57 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TO DO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <p>TASK LIST</p>
-        <button id="btnNewTask" class="btn-new-task">New task</button>
-        <button id="btnList" class="btn-list">List</button>
+    <header class="header container">
+        <span>TASK</span>
+        <button id="newTask">New Task</button>
+        <button id="list">List</button>
+
     </header>
 
-    <main class="main">
-        <section class="task-information" id="taskInformationContainer">
-            <p class="text-to-do">TO DO</p>
-            <label class="text-tittle">Title:</label>
-            <input type="text" id="tittle" class="tittle" size="30">
-            <label class="text-hour">Hour:</label>
-            <input type="time" name="" id="hour">
-            <label class="text-priority">Priority:</label>
-            <select id="priority-select">
-                <option value="CHOOSE OPTION">Please choose an option</option>
-                <option value="HIGH">HIGH</option>
-                <option value="MEDIUM">MEDIUM</option>
-                <option value="LOW">LOW</option>
-            </select>
-            <label class="text-comment">Comments:</label>
-            <input type="text" id="comments">
-            <button id="btnSave" class="btn-save">Save</button>
-        </section>
+    <main class="main container">
 
-        <section class="task-list-container" id="listContainer">
+        <section class="information-task-container container">
 
-            <label >TO DO</label>
-            <select id="selectOrder" class="select-order">
-                <option  class="order-option" value="From HIGH to LOW">From HIGH to LOW</option>
-                <option  class="order-option" value="From LOW to HIGH">From LOW to HIGH</option>
-                <option  class="order-option" value="HIGH">HIGH</option>
-                <option  class="order-option" value="MEDIUM">MEDIUM</option>
-                <option  class="order-option" value="LOW">LOW</option>
-            </select>
+            <span>TO DO</span>
             
+            <span>Tittle: </span>
+            <input type="text" id="tittle" >
+
+            <span>hour: </span>
+            <input type="time" id="hour">
+
+            <span>Priority: </span>
+
+            <div>
+                <input type="radio" id="HIGH" name="priority-group" value="HIGH" class="radio" checked>
+                <label>HIGH</label>
+            </div>
+
+            <div>
+                <input type="radio" id="MEDIUM" name="priority-group" value="MEDIUM" class="radio">
+                <label>MEDIUM</label>
+            </div>
+
+            <div>
+                <input type="radio" id="LOW" name="priority-group" value="LOW" class="radio">
+                <label>LOW</label>
+            </div>
+
+            <span>Comment:</span>
+            <input type="text" name="" id="comment">
+
+            <button id="save">Save</button>
+
+
         </section>
+
+        <section class="task-list container">
+
+            <span>TO DO</span>
+            
+            <select name="" id="select-order" class="order">
+                <option value="From HIGH to LOW">From HIGH to LOW</option>
+                 <option value="From LOW to HIGH">From LOW to HIGH</option>
+                <option value="HIGH">HIGH</option>
+                <option value="LOW">LOW</option>
+                <option value="MEDIUM">MEDIUM</option>
+              </select>
+
+        </section>
+
     </main>
 
-    <footer class="footer">
-
+    <footer class="footer container">
+        <span>Made By Manuel Rico</span>
     </footer>
-
-   
-
-
 
     <script src="script.js"></script>
 </body>

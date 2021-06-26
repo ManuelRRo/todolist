@@ -1,177 +1,46 @@
 body {
-    background-color: green;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .header {
-    height: 10vh;
+    background-color: red;
     width: 100vw;
-    background-color: grey;
-    display: flex;
-    align-items: center;
+    height: 20vh;
 }
 
 .main {
-    height: 80vh;
+    background-color: blue;
     width: 100vw;
-    background-color: honeydew;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    height: 60vh;
 }
 
 .footer {
-    height: 10vh;
-    width: 100vw;
-    background-color: hotpink;
-}
-
-.task-information {
-    /* display: flex; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: skyblue;
-    width: 50vw;
-    height: 40vh;
-}
-
- .text-to-do {
-    margin: 0;
-    text-align: center;
-}
-
-.text-tittle {
-    
-}
-
-.text-hour {
-
-} 
-
-.text-priority {
-    
-}
-
-.text-comment {
-
-}
-
-.btn-new-task {
-    margin-left: 60vw;
-    margin-right: 1vw;
-}
-
-.btn-save {
-    width: 30vw;
-    margin-top: 2px;
-}
-
-.task-list-container {
-    display: none;
-}
-
-.center {
-
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 90vw;
-    height: 25vh;
-    background-color:red;
-    margin: 4vh;
-}
-
-.task-list-container {
-    width: 90vw;
-    height: 70vh;
-    display: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: blue;
-    overflow: scroll;
-}
-
-.task-header {
-    width: 100%;
-    height: 20%;
-    background-color: yellow;
-    margin: 0;
-    padding: 0;
-    display:flex;
-}
-
-.left-side {
-    text-align: left;
-    height: 100%;
-    width: 50%;
     background-color: orange;
+    width: 100vw;
+    height: 20vh;
 }
 
-.right-side {
-    text-align: right;
-    height: 100%;
-    width: 50%;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.information-task-container{
+    flex-direction: column ;
     background-color: orchid;
-}
-
-.hour-position {
-    margin: 2vw;
-}
-
-.priority-position {
-    margin: 2vw;
-}
-
-.task-content {
-    width: 100%;
     height: 80%;
-    background-color: white;   
-    text-align: center;
-    font-size: x-large;
+    width: 60%;
 }
 
-.up-side{
-    height: 50%;
-    width: 100%;
-    text-align: center;
-    background-color: blanchedalmond;
-}
+.task-list {
+    display: none;
+    background-color: white;
+    height: 80%;
+    width: 80%;
+    flex-wrap: wrap;
+    overflow: scroll;
 
-.down-side {
-    height: 50%;
-    width: 100%;
-    background-color: purple;
-    text-align: left;
-}
-
-.text-tittle-task-content {
-    /* top | right | bottom | left */
-    padding: 5vh 0 0 0;
-    margin: 0;
-
-}
-
-.text-comment-task-content {
-    margin: 0;
-    padding: 4vh 0 0 2vh;
-}
-
-.line {
-    margin: 0.2;
-    padding: 0;
-    height: 0.2vh;
-    width: 50vh;
-    background-color: black;
-}
-
-.select-order {
-    width: 50vw;
-    height: 20px;
 }
 
 .hide {
@@ -181,3 +50,88 @@ body {
 .show {
     display: flex;
 }
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */  
+.task-container {
+   background-color: red;
+   width: 300px;
+   height: 150px;
+   display: flex;
+   flex-wrap: wrap;
+   margin: 5px;;
+}
+  
+.header-task-container {
+    width: 100%;
+    height: 30%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+  
+.main-task-container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction:column;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+}
+  
+.hour-text {
+    color: black;
+}
+  
+.priority-text {
+    color: black;
+    margin-left: 50%;
+}
+  
+p {
+    margin: 0;
+}
+  
+hr {
+    border:none;
+    background-color: white;
+    width: 175px;
+    height: 3px;
+    margin-top: 7%;
+    margin-bottom: 4%;
+    padding: 0;
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////////// */
+.central {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    background-color: blue;
+    display: flex;
+    flex-direction:column;
+    justify-content : center;
+    align-items: center;
+    order: 0;
+  }
+  
+  .order {
+    width:200px;
+    height:30px;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .first {
+    order: 1;
+  }
+  
+  .second {
+    order: 2;
+  }
+  
+  .third {
+    order: 3;
+  }
