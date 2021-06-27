@@ -135,3 +135,9 @@ hr {
   .third {
     order: 3;
   }
+
+  .tableTask{
+      text-align: center;
+      border-spacing: 5px 1rem;
+      border: 1px solid #333;
+  }

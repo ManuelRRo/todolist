@@ -29,7 +29,8 @@ btnList.addEventListener("click", () => {
 });
 
 btnSave.addEventListener("click",() =>{
-    buildTask();
+    if (isDataCorrect()) buildTask();
+    emptyTxt();
 });
 
 function setPriority (){
@@ -40,6 +41,24 @@ function setPriority (){
       } 
   });
   return str;
+}
+
+function isDataCorrect (){
+  console.log(txtComment.value);
+   if (txtTittle.value.trim() != ""){
+     if (txtHour.value != ""){
+      if (txtComment.value.trim() != ""){
+        return true;
+       }   
+     }
+   }
+   return false;
+}
+
+function emptyTxt () {
+  txtTittle.value = "";
+  txtComment.value = "";
+  txtHour.value = "";
 }
 
 ////////////////////////////////////

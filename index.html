@@ -20,35 +20,63 @@
 
         <section class="information-task-container container">
 
-            <span>TO DO</span>
+            <table class="tableTask">
+                <thead>
+                    <tr>
+                        <th colspan="3">TO DO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span>Tittle: </span></td>
+                        <td><input type="text" id="tittle" ></td>
+                    </tr>
+                    <tr>
+                        <td><span>hour: </span></td>
+                        <td><input type="time" id="hour"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Priority:</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="radio" id="HIGH" name="priority-group" value="HIGH" class="radio" checked>
+                                <label>HIGH</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <input type="radio" id="MEDIUM" name="priority-group" value="MEDIUM" class="radio">
+                                <label >MEDIUM</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <input type="radio" id="LOW" name="priority-group" value="LOW" class="radio">
+                                <label>LOW</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Comment:</span>
+                        </td>
+                        <td>
+                            <input type="text" name="" id="comment">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><button id="save">Save</button></td>
+                    </tr>
+                </tbody>
+            </table>
             
-            <span>Tittle: </span>
-            <input type="text" id="tittle" >
 
-            <span>hour: </span>
-            <input type="time" id="hour">
+            
 
-            <span>Priority: </span>
-
-            <div>
-                <input type="radio" id="HIGH" name="priority-group" value="HIGH" class="radio" checked>
-                <label>HIGH</label>
-            </div>
-
-            <div>
-                <input type="radio" id="MEDIUM" name="priority-group" value="MEDIUM" class="radio">
-                <label>MEDIUM</label>
-            </div>
-
-            <div>
-                <input type="radio" id="LOW" name="priority-group" value="LOW" class="radio">
-                <label>LOW</label>
-            </div>
-
-            <span>Comment:</span>
-            <input type="text" name="" id="comment">
-
-            <button id="save">Save</button>
+            
 
 
         </section>
