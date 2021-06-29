@@ -13,6 +13,12 @@ body {
   height: 90vh;
 }
 
+.error-message{
+  color: red;
+  margin-left: 45%;
+  display: none;
+}
+
 .select-order-container {
   display: flex;
   flex-direction: column;
@@ -69,7 +75,7 @@ body {
 
 .checklist-img {
   width: 100px;
-  height: 100px;
+  height: 90px;
   margin-left: 40%;
 }
 
@@ -93,7 +99,7 @@ body {
 }
 
 .information-task-container {
-  height: 80%;
+  height: 85%;
   width: auto;
   border: solid;
   padding: 10px;
@@ -169,7 +175,7 @@ body {
 }
 
 .task-text-list {
-  color: white;
+  color: black;
   font-family: "Nunito", sans-serif;
 }
 

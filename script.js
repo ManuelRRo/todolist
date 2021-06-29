@@ -3,6 +3,7 @@ const btnList = document.getElementById('list');
 const btnSave = document.getElementById('save');;
 const informationContainer = document.querySelector('.information-task-container');
 const taskListContainer = document.querySelector('.task-list');
+const errorMessage = document.querySelector(".error-message");
 
 const txtTittle = document.getElementById("tittle");
 const txtHour = document.getElementById("hour");
@@ -29,8 +30,11 @@ btnList.addEventListener("click", () => {
 });
 
 btnSave.addEventListener("click", () => {
-  if (isDataCorrect()) buildTask();
-  emptyTxt();
+  if (isDataCorrect()){
+    buildTask();
+    emptyTxt();
+  } 
+  
 });
 
 function setPriority(headerContainer) {
@@ -55,6 +59,7 @@ function isDataCorrect() {
       }
     }
   }
+  errorMessage.classList.add("show");
   return false;
 }
 
@@ -62,6 +67,7 @@ function emptyTxt() {
   txtTittle.value = "";
   txtComment.value = "";
   txtHour.value = "";
+  errorMessage.classList.remove("show");
 }
 
 ////////////////////////////////////
