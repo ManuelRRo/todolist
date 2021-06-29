@@ -1,106 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO DO</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TO DO</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,300&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
 
-    <header class="header container">
-        <span>TASK</span>
-        <button id="newTask">New Task</button>
-        <button id="list">List</button>
+        <header class="header container">
+            <span class="task-text">TASK LIST</span>
+            <button class="button" id="newTask">New Task</button>
+            <button class="button" id="list">List</button>
 
-    </header>
+        </header>
 
-    <main class="main container">
+        <main class="main container">
 
-        <section class="information-task-container container">
+            <section class="information-task-container">
+                <img class="checklist-img" src="./img/checklist.png" alt="">
+                <br>
+                <span class="to-do-text">TO DO</span>
+                <br>
+                <br>
+                <span class="data-name">Tittle: </span>
+                <br>
+                <input class="input-text" type="text" id="tittle">
+                <br>
+                <br>
+                <span class="data-name">hour: </span>
+                <br>
+                <input class="input-text" type="time" id="hour">
+                <br>
+                <br>
+                <span class="data-name">Priority:</span>
+                <br>
+                <div class="radio-container">
+                    <input type="radio" id="HIGH" name="priority-group"
+                        value="HIGH"
+                        class="radio" checked>
+                    <label class="data-name">HIGH</label>
 
-            <table class="tableTask">
-                <thead>
-                    <tr>
-                        <th colspan="3">TO DO</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span>Tittle: </span></td>
-                        <td><input type="text" id="tittle" ></td>
-                    </tr>
-                    <tr>
-                        <td><span>hour: </span></td>
-                        <td><input type="time" id="hour"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Priority:</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <input type="radio" id="HIGH" name="priority-group" value="HIGH" class="radio" checked>
-                                <label>HIGH</label>
-                            </div>
-                        </td>
-                        <td>
-                            <div>
-                                <input type="radio" id="MEDIUM" name="priority-group" value="MEDIUM" class="radio">
-                                <label >MEDIUM</label>
-                            </div>
-                        </td>
-                        <td>
-                            <div>
-                                <input type="radio" id="LOW" name="priority-group" value="LOW" class="radio">
-                                <label>LOW</label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>Comment:</span>
-                        </td>
-                        <td>
-                            <input type="text" name="" id="comment">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3"><button id="save">Save</button></td>
-                    </tr>
-                </tbody>
-            </table>
-            
+                    <input type="radio" id="MEDIUM" name="priority-group"
+                        value="MEDIUM" class="radio">
+                    <label class="data-name">MEDIUM</label>
 
-            
+                    <input type="radio" id="LOW" name="priority-group"
+                        value="LOW"
+                        class="radio">
+                    <label class="data-name">LOW</label>
+                </div>
+                <br>
+                <span class="data-name">Comment:</span>
+                <br>
+                <input class="input-text" type="text" name="" id="comment">
+                <br>
+                <br>
+                <button class="btn-save" id="save">Save</button>
 
-            
+            </section>
 
+            <section class="task-list">
 
-        </section>
+                <div class="select-order-container">
+                    <img class="checklist-img" src="./img/checklist.png" alt="">
+                    <span class="to-do-text_">TO DO</span>
 
-        <section class="task-list container">
+                    <select name="" id="select-order" class="order">
+                        <option value="From HIGH to LOW">From HIGH to LOW</option>
+                        <option value="From LOW to HIGH">From LOW to HIGH</option>
+                        <option value="HIGH">HIGH</option>
+                        <option value="LOW">LOW</option>
+                        <option value="MEDIUM">MEDIUM</option>
+                    </select>
+                </div>
+            </section>
 
-            <span>TO DO</span>
-            
-            <select name="" id="select-order" class="order">
-                <option value="From HIGH to LOW">From HIGH to LOW</option>
-                 <option value="From LOW to HIGH">From LOW to HIGH</option>
-                <option value="HIGH">HIGH</option>
-                <option value="LOW">LOW</option>
-                <option value="MEDIUM">MEDIUM</option>
-              </select>
+        </main>
 
-        </section>
-
-    </main>
-
-    <footer class="footer container">
-        <span>Made By Manuel Rico</span>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>

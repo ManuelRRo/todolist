@@ -1,143 +1,244 @@
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .header {
-    background-color: red;
-    width: 100vw;
-    height: 20vh;
+  background-color: #185adb;
+  width: 100vw;
+  height: 10vh;
 }
 
 .main {
-    background-color: blue;
-    width: 100vw;
-    height: 60vh;
+  width: 100vw;
+  height: 90vh;
 }
 
-.footer {
-    background-color: orange;
-    width: 100vw;
-    height: 20vh;
+.select-order-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.button {
+  margin: 5px;
+  border: none;
+  font-size: larger;
+  background-color: transparent;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+}
+
+.btn-save {
+  margin: 5px;
+  width: 100px;
+  height: 50px;
+  border: solid;
+  font-size: larger;
+  background-color: white;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  margin-left: 43%;
+}
+
+.radio {
+  cursor: pointer;
+}
+
+.radio-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-save:hover {
+  background-color: #185adb;
+  color: white;
+}
+
+.to-do-text_ {
+  margin-bottom: 30px;
+  font-family: "Nunito", sans-serif;
+}
+
+.task-text {
+  margin-right: 60%;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-size: larger;
+}
+
+.checklist-img {
+  width: 100px;
+  height: 100px;
+  margin-left: 40%;
+}
+
+.input-text {
+  width: 500px;
+}
+
+.to-do-text {
+  margin-left: 45%;
+  font-family: "Nunito", sans-serif;
+}
+
+.information-task-container > span {
+  font-size: larger;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.information-task-container{
-    flex-direction: column ;
-    background-color: orchid;
-    height: 80%;
-    width: 60%;
+.information-task-container {
+  height: 80%;
+  width: auto;
+  border: solid;
+  padding: 10px;
+  box-shadow: 10px 5px 5px gray;
 }
 
 .task-list {
-    display: none;
-    background-color: white;
-    height: 80%;
-    width: 80%;
-    flex-wrap: wrap;
-    overflow: scroll;
-
+  display: none;
+  height: 80%;
+  width: 70%;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: solid;
+  box-shadow: 10px 5px 5px gray;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .show {
-    display: flex;
+  display: flex;
 }
 
-/* ////////////////////////////////////////////////////////////////////////////////////////////// */  
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
 .task-container {
-   background-color: red;
-   width: 300px;
-   height: 150px;
-   display: flex;
-   flex-wrap: wrap;
-   margin: 5px;;
+  width: 460px;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
 }
-  
+
 .header-task-container {
-    width: 100%;
-    height: 30%;
-    background-color: green;
-    display: flex;
-    justify-content: center;
-    align-items:center;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-  
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
 .main-task-container {
-    width: 100%;
-    height: 70%;
-    display: flex;
-    flex-direction:column;
-    background-color: blue;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: #185adb;
+  justify-content: center;
+  align-items: center;
 }
-  
+
 .hour-text {
-    color: black;
 }
-  
+
+.tittle-text {
+  margin-top: 5px;
+}
+
 .priority-text {
-    color: black;
-    margin-left: 50%;
+  margin-left: 50%;
 }
-  
+
+.task-text-list {
+  color: white;
+  font-family: "Nunito", sans-serif;
+}
+
 p {
-    margin: 0;
+  margin: 0;
 }
-  
+
 hr {
-    border:none;
-    background-color: white;
-    width: 175px;
-    height: 3px;
-    margin-top: 7%;
-    margin-bottom: 4%;
-    padding: 0;
+  border: none;
+  background-color: white;
+  width: 175px;
+  height: 3px;
+  margin-top: 7%;
+  margin-bottom: 4%;
+  padding: 0;
 }
 /* ///////////////////////////////////////////////////////////////////////////////////////////////// */
 .central {
-    width: 200px;
-    height: 100px;
-    margin: 10px;
-    background-color: blue;
-    display: flex;
-    flex-direction:column;
-    justify-content : center;
-    align-items: center;
-    order: 0;
-  }
-  
-  .order {
-    width:200px;
-    height:30px;
-  }
-  
-  .hide {
-    display: none;
-  }
-  
-  .first {
-    order: 1;
-  }
-  
-  .second {
-    order: 2;
-  }
-  
-  .third {
-    order: 3;
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  order: 0;
+}
+
+.order {
+  width: 200px;
+  height: 30px;
+  margin-left: 150px;
+  margin-right: 150px;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.first {
+  order: 1;
+}
+
+.second {
+  order: 2;
+}
+
+.third {
+  order: 3;
+}
+
+.tableTask {
+  text-align: center;
+  border-spacing: 5px 1rem;
+  border: 1px solid #333;
+}
+
+@media screen and (max-width: 550px) {
+  .input-text {
+    width: 400px;
   }
 
-  .tableTask{
-      text-align: center;
-      border-spacing: 5px 1rem;
-      border: 1px solid #333;
+  .task-list {
+    width: 90%;
   }
+
+  .task-container {
+    width: 400px;
+  }
+}
