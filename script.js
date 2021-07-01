@@ -70,6 +70,27 @@ function emptyTxt() {
   errorMessage.classList.remove("show");
 }
 
+function setTwelveHourFormat (hour) {
+  let hourValue = parseInt(hour.charAt(0) + hour.charAt(1));
+  let minutes = hour.charAt(3) + hour.charAt(4);
+  let str = "";
+  
+  if (hourValue === 0){
+    str = new String(`12:${minutes} AM`);
+  }else if (hourValue === 12){
+    str =  hour + " PM";
+  }else if (hourValue > 12){
+    if ((hourValue-12) < 10){
+      str = new String(`0${hourValue-12}:${minutes} PM`);
+      
+    }else {
+      str = new String(`${hourValue-12}:${minutes} PM`);
+    }
+  } else str = new String(hour+" AM");
+           
+  return str;
+}
+
 ////////////////////////////////////
 function buildTask() {
 
@@ -90,7 +111,7 @@ function buildTask() {
   comment.classList.add("task-text-list");
   mainTaskContainer.classList.add("main-task-container");
 
-  hour.innerText = txtHour.value;
+  hour.innerText = setTwelveHourFormat(txtHour.value);
   priority.innerText = setPriority(headerTaskContainer);
   tittle.innerText = txtTittle.value;
   comment.innerText = txtComment.value;
