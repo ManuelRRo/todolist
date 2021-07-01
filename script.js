@@ -30,11 +30,11 @@ btnList.addEventListener("click", () => {
 });
 
 btnSave.addEventListener("click", () => {
-  if (isDataCorrect()){
+  if (isDataCorrect()) {
     buildTask();
     emptyTxt();
-  } 
-  
+  }
+
 });
 
 function setPriority(headerContainer) {
@@ -70,24 +70,24 @@ function emptyTxt() {
   errorMessage.classList.remove("show");
 }
 
-function setTwelveHourFormat (hour) {
+function setTwelveHourFormat(hour) {
   let hourValue = parseInt(hour.charAt(0) + hour.charAt(1));
   let minutes = hour.charAt(3) + hour.charAt(4);
   let str = "";
-  
-  if (hourValue === 0){
+
+  if (hourValue === 0) {
     str = new String(`12:${minutes} AM`);
-  }else if (hourValue === 12){
-    str =  hour + " PM";
-  }else if (hourValue > 12){
-    if ((hourValue-12) < 10){
-      str = new String(`0${hourValue-12}:${minutes} PM`);
-      
-    }else {
-      str = new String(`${hourValue-12}:${minutes} PM`);
+  } else if (hourValue === 12) {
+    str = hour + " PM";
+  } else if (hourValue > 12) {
+    if ((hourValue - 12) < 10) {
+      str = new String(`0${hourValue - 12}:${minutes} PM`);
+
+    } else {
+      str = new String(`${hourValue - 12}:${minutes} PM`);
     }
-  } else str = new String(hour+" AM");
-           
+  } else str = new String(hour + " AM");
+
   return str;
 }
 
